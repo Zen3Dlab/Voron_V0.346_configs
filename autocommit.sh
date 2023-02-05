@@ -61,7 +61,7 @@ grab_version(){
 }
 
 function grab_title(){
-     m0="$1"
+     m0=$1
 }
 
 # To fully automate this and not have to deal with auth issues, generate a legacy token on Github
