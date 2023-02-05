@@ -74,10 +74,10 @@ push_config(){
   current_date=$(date +"%Y-%m-%d %T")
   echo "sh: $1"
 
-  git commit -m "Autocommit from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
+  git commit -m "$m0 from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
   git push origin master
 }
 
-echo "sh: $1"
+m0 = "$1"
 grab_version
 push_config
