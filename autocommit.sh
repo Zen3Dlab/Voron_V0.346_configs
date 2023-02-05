@@ -60,6 +60,10 @@ grab_version(){
   fi
 }
 
+function title() {
+     m0 = "$1"
+}
+
 # To fully automate this and not have to deal with auth issues, generate a legacy token on Github
 # then update the command below to use the token. Run the command in your base directory and it will
 # handle auth. This should just be executed in your shell and not committed to any files or
@@ -79,6 +83,6 @@ push_config(){
 }
 
 echo "sh: $1"
-local m0 = "$1"
+title
 grab_version
 push_config
