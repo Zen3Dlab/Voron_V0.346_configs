@@ -83,6 +83,7 @@ push_config(){
   git push origin master
 }
 
+echo "sh: $1"
 grab_title
 grab_version
 push_config
