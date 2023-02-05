@@ -72,9 +72,12 @@ push_config(){
   git pull origin master
   git add .
   current_date=$(date +"%Y-%m-%d %T")
+  echo "sh: $1"
+
   git commit -m "Autocommit from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
   git push origin master
 }
 
+echo "sh: $1"
 grab_version
 push_config
