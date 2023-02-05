@@ -76,9 +76,9 @@ push_config(){
   git pull origin master
   git add .
   current_date=$(date +"%Y-%m-%d %T")
-  echo "sh: $m0"
+  echo "sh: $m1"
 
-  git commit -m "$m0 from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
+  git commit -m "$m1 from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
   git push origin master
 }
 
