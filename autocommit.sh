@@ -79,6 +79,6 @@ push_config(){
 }
 
 echo "sh: $1"
-m0 = "$1"
+local m0 = "$1"
 grab_version
 push_config
