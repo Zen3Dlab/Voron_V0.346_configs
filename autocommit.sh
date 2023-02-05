@@ -60,7 +60,7 @@ grab_version(){
   fi
 }
 
-function title(){
+function grab_title(){
      m0="$1"
 }
 
@@ -82,7 +82,6 @@ push_config(){
   git push origin master
 }
 
-echo "sh: $1"
-title
+grab_title
 grab_version
 push_config
