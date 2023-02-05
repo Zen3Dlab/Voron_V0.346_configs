@@ -60,8 +60,8 @@ grab_version(){
   fi
 }
 
-function title() {
-     m0 = "$1"
+function title(){
+     m0="$1"
 }
 
 # To fully automate this and not have to deal with auth issues, generate a legacy token on Github
