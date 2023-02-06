@@ -76,6 +76,6 @@ push_config(){
   git push origin master
 }
 
-m0="$1"
+m0="'$*'"
 grab_version
 push_config
