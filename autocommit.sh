@@ -60,10 +60,6 @@ grab_version(){
   fi
 }
 
-function grab_title(){
-     m0=$1
-}
-
 # To fully automate this and not have to deal with auth issues, generate a legacy token on Github
 # then update the command below to use the token. Run the command in your base directory and it will
 # handle auth. This should just be executed in your shell and not committed to any files or
@@ -76,14 +72,11 @@ push_config(){
   git pull origin master
   git add .
   current_date=$(date +"%Y-%m-%d %T")
-  echo "sh: $1"
-  echo "sh: $m0"
 
-  git commit -m "$m1 from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
+  git commit -m "$m0 from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
   git push origin master
 }
 
-echo "sh: $1"
-grab_title
+m0="$1"
 grab_version
 push_config
